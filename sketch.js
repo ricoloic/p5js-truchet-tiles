@@ -9,6 +9,7 @@ function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   frameRate(30);
   noStroke();
+  background(255);
 
   cols = floor(width / scl) - 1;
   rows = floor(height / scl) - 1;
@@ -43,13 +44,13 @@ function tile(col, row) {
   push();
   translate(x, y);
   rotate(HALF_PI * floor(random(4)));
-  //stroke(0);
-  //strokeWeight(weight);
-  //noFill();
+  stroke(0);
+  strokeWeight(weight);
+  noFill();
   //rect(0, 0, scl, scl);
-  //arc(-scl / 2, -scl / 2, scl, scl, 0, HALF_PI);
-  //arc(scl - scl / 2, scl - scl / 2, scl, scl, PI, PI + HALF_PI);
-  triangle(-scl / 2, -scl / 2, scl - scl / 2, scl - scl / 2, -scl / 2, scl - scl / 2);
+  arc(-scl / 2, -scl / 2, scl, scl, 0, HALF_PI);
+  arc(scl - scl / 2, scl - scl / 2, scl, scl, PI, PI + HALF_PI);
+  //triangle(-scl / 2, -scl / 2, scl - scl / 2, scl - scl / 2, -scl / 2, scl - scl / 2);
   pop();
 }
 
